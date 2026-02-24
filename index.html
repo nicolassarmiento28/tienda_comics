@@ -83,30 +83,6 @@
     </div>
 
     <script>
-        // Funcionalidad del menú hamburguesa
-        const menuToggle = document.getElementById('menuToggle');
-        const navbar = document.getElementById('navbar');
-
-        menuToggle.addEventListener('click', function (e) {
-            e.preventDefault();
-            navbar.classList.toggle('active');
-        });
-
-        // Cerrar menú cuando se hace clic en un enlace
-        const navLinks = document.querySelectorAll('.navbar a:not(.responsive)');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                navbar.classList.remove('active');
-            });
-        });
-
-        // Cerrar menú cuando se redimensiona la ventana
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 600) {
-                navbar.classList.remove('active');
-            }
-        });
-
         let slideIndex = 1;
         let slideTimer;
 
@@ -267,6 +243,8 @@
         </div>
     </footer>
 
+    <script src="scripts/nav.js"></script>
+
     <script>
         const scrollToTopBtn = document.getElementById('scrollToTop');
 
@@ -285,11 +263,6 @@
             });
         });
 
-        // Cerrar menú al hacer scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.remove('active');
-        });
     </script>
 
 </body>

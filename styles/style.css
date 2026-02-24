@@ -1,3 +1,4 @@
+html,
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../assets/img/imagendefondo.jpg');
@@ -17,6 +18,12 @@ h2 {
 }
 
 @media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     h2 {
         font-size: 1.5rem;
         margin-bottom: 15px;
