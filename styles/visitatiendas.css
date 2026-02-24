@@ -1,0 +1,90 @@
+.visitatiendas-texto {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.visitatiendas-texto h2 {
+    color: #1a1a1a;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.visitatiendas-texto h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: skyblue;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.visitatiendas-texto p {
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 1em;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.visitatiendas-texto p:hover {
+    color: skyblue;
+}
+
+/* Estilos para textos especiales */
+.visitatiendas-texto p:nth-child(5),
+.visitatiendas-texto p:nth-child(6),
+.visitatiendas-texto p:nth-child(8),
+.visitatiendas-texto p:nth-child(10) {
+    font-weight: 600;
+    background: rgba(211, 47, 47, 0.05);
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-left: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .visitatiendas-texto {
+        margin: 40px 20px;
+        padding: 25px;
+    }
+
+    .visitatiendas-texto h2 {
+        font-size: 1.8em;
+    }
+
+    .visitatiendas-texto p {
+        text-align: left;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .visitatiendas-texto {
+        margin: 30px 15px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .visitatiendas-texto h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .visitatiendas-texto p {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+}

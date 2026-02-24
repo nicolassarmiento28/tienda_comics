@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/nosotros.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/5c6ec18e9c.js" crossorigin="anonymous"></script>
+    <title>Inframundo, tiendas de comics</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="active" href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="nosotros.html"><i class="fa-solid fa-address-card"></i>Nosotros</a>
+        <a href="productos.html"><i class="fa-brands fa-servicestack"></i>Productos</a>
+        <a href="comocomprar.html"><i class="fa-solid fa-bag-shopping"></i></i>Cómo Comprar</a>
+        <a href="visitatiendas.html"><i class="fa-solid fa-store"></i>Visita Nuestras Tiendas</a>
+        <a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a>
+        <div class="responsive">
+            <i class="fa-solid fa-bars responsive" aria-hidden="true"></i>
+
+        </div>
+
+
+    </div>
+
+    <div class="banner">
+        <a href="index.html" class="banner-logo">
+            <img src="assets/img/logo.png" alt="Logo Inframundo">
+        </a>
+        <div class="banner-contenido">
+            <h1 class="titulo-banner">Bienvenidos a Inframundo comics</h1>
+            <a class="btn producto" href="productos.html">Ver productos</a>
+        </div>
+    </div>
+
+    <h2>Unete a Inframundo Comics</h2>
+
+    <div class="introduction-section">
+        <div class="comic-services">
+            <img src="assets/img/comic-pay.jpg" alt="Comic Pay" class="service-icon">
+            <img src="assets/img/comic-delivery.jpg" alt="Comic Delivery" class="service-icon">
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="assets/img/batman.jpg" alt="Batman">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="assets/img/ligajusticia.jpg" alt="Liga de la Justicia">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="assets/img/spiderman.jpg" alt="Spiderman">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="assets/img/secretavengers-4.jpg" alt="Secret Avengers">
+                </div>
+
+                <a class="carousel-prev" onclick="changeCarousel(-1)">&#10094;</a>
+                <a class="carousel-next" onclick="changeCarousel(1)">&#10095;</a>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot" onclick="currentCarousel(1)"></span>
+                <span class="dot" onclick="currentCarousel(2)"></span>
+                <span class="dot" onclick="currentCarousel(3)"></span>
+                <span class="dot" onclick="currentCarousel(4)"></span>
+            </div>
+        </div>
+
+        <div class="search-form-wrap">
+            <form class="search-form" action="productos.html" method="get" role="search">
+                <label for="search-input" class="visually-hidden">Buscar productos</label>
+                <input id="search-input" name="q" type="search" placeholder="Buscar productos...">
+                <button type="submit" class="btn buscar">Buscar</button>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        let slideTimer;
+
+        function changeCarousel(n) {
+            clearTimeout(slideTimer);
+            showCarousel(slideIndex += n);
+            slideTimer = setTimeout(autoCarousel, 5000);
+        }
+
+        function currentCarousel(n) {
+            clearTimeout(slideTimer);
+            showCarousel(slideIndex = n);
+            slideTimer = setTimeout(autoCarousel, 5000);
+        }
+
+        function autoCarousel() {
+            showCarousel(slideIndex += 1);
+            slideTimer = setTimeout(autoCarousel, 5000);
+        }
+
+        function showCarousel(n) {
+            let slides = document.getElementsByClassName("carousel-slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Inicia el carrusel automático
+        showCarousel(slideIndex);
+        slideTimer = setTimeout(autoCarousel, 5000);
+    </script>
+
+    <h2>Productos destacados</h2>
+
+    <div class="grid-comics">
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/hulk.jpg" alt="Hulk">
+            </div>
+            <h5 class="comic-title">El Increible Hulk</h5>
+            <p class="comic-price">$12.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/laligadelajusticia.jpg" alt="LLiga de la Justicia">
+            </div>
+            <h5 class="comic-title">Liga de la Justicia: Origen</h5>
+            <p class="comic-price">$15.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/wolverine.jpg" alt="Wolverine">
+            </div>
+            <h5 class="comic-title">Wolverine: Regreso a la naturaleza </h5>
+            <p class="comic-price">$13.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/xmen.jpg" alt="X-Men: Días del Futuro Pasado">
+            </div>
+            <h5 class="comic-title">X-Men: Días del Futuro Pasado</h5>
+            <p class="comic-price">$14.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/punisher.jpg" alt="The Punisher: Soviet">
+            </div>
+            <h5 class="comic-title">The Punisher: Soviet</h5>
+            <p class="comic-price">$11.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/daredevil.jpg" alt="Daredevil">
+            </div>
+            <h5 class="comic-title">Daredevil: Tierra de sombras</h5>
+            <p class="comic-price">$16.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/hellboy.jpg" alt="Hellboy">
+            </div>
+            <h5 class="comic-title">Hellboy: Seed of destruction</h5>
+            <p class="comic-price">$17.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+
+        <div class="comic-card">
+            <div class="comic-image">
+                <img src="assets/img/spawn.jpg" alt="Spawn">
+            </div>
+            <h5 class="comic-title">Spawn: Cataclismo</h5>
+            <p class="comic-price">$18.990</p>
+            <a class="btn masdetalles" href="productos.html">Más detalles</a>
+        </div>
+    </div>
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-payment">
+                <h4>Métodos de Pago</h4>
+                <div class="payment-logos">
+                    <img src="assets/img/mastercard.png" alt="MasterCard" class="payment-logo">
+                    <img src="assets/img/visa.png" alt="Visa" class="payment-logo">
+                    <img src="assets/img/redcompra.png" alt="RedCompra" class="payment-logo">
+                </div>
+            </div>
+
+            <div class="footer-brand">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo Inframundo"></a>
+                <p>Inframundo - Tienda de comics</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>Arlegui 441, Viña del Mar</p>
+                <p>Email: info@inframundo.cl</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Inframundo Comics. Todos los derechos reservados.</p>
+            <button id="scrollToTop" class="scroll-to-top" aria-label="Subir al inicio">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

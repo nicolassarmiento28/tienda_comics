@@ -1,0 +1,113 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    gap: 50px;
+    background-color: grey;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    border: 2px solid black;
+    font-size: 18px;
+}
+
+.cajasolid {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 5px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+.contenido-nosotros {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenido-nosotros h2 {
+    color: #1a1a1a;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contenido-nosotros h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: skyblue;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.introduccion h1 {
+    font-size: 36px;
+    text-align: center;
+    position: relative;
+    max-width: 1100px;
+    margin: 0;
+    padding: 20px;
+    padding-right: 200px;
+}
+
+.contenido-nosotros p {
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 1em;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.contenido-nosotros p:hover {
+    color: skyblue;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenido-nosotros {
+        margin: 40px 20px;
+        padding: 25px;
+    }
+
+    .contenido-nosotros h2 {
+        font-size: 1.8em;
+    }
+
+    .contenido-nosotros p {
+        text-align: left;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-nosotros {
+        margin: 30px 15px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .contenido-nosotros h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .contenido-nosotros p {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+}

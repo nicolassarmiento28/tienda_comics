@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/productos.css">
+
+    <script src="https://kit.fontawesome.com/5c6ec18e9c.js" crossorigin="anonymous"></script>
+    <title>Inframundo, tiendas de comics</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a href="nosotros.html"><i class="fa-solid fa-address-card"></i>Nosotros</a>
+        <a class="active" href="productos.html"><i class="fa-brands fa-servicestack"></i>Productos</a>
+        <a href="comocomprar.html"><i class="fa-solid fa-bag-shopping"></i></i>Cómo Comprar</a>
+        <a href="visitatiendas.html"><i class="fa-solid fa-store"></i>Visita Nuestras Tiendas</a>
+        <a href="contacto.html"><i class="fa-solid fa-envelope"></i>Contacto</a>
+        <div class="responsive">
+            <i class="fa-solid fa-bars responsive" aria-hidden="true"></i>
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <div class="banner">
+        <a href="index.html" class="banner-logo">
+            <img src="assets/img/logo.png" alt="Logo Inframundo">
+        </a>
+        <div class="banner-contenido">
+            <h1 class="titulo-banner">Bienvenidos a Inframundo comics</h1>
+            <a class="btn producto" href="productos.html">Ver productos</a>
+        </div>
+    </div>
+
+    <div class="introduccion">
+        <h1>Catálogo de Comics</h1>
+    </div>
+
+    <h4>Nuestros Comics Disponibles</h4>
+
+    <div class="grid-comics">
+        <div class="comic-card"
+            data-product='{"id": 1, "title": "Spider-Man Vol. 1", "price": "$12.990", "image": "assets/img/spiderman1.jpg", "description": "Una increíble aventura del Hombre Araña. Descubre las acrobacias más espectaculares y los villanos más peligrosos."}'>
+            <div class="comic-image">
+                <img src="assets/img/spiderman1.jpg" alt="Spider-Man Vol. 1">
+            </div>
+            <h5 class="comic-title">Spider-Man Vol. 1</h5>
+            <p class="comic-price">$12.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 2, "title": "Batman: La Broma Asesina", "price": "$15.990", "image": "assets/img/batman2_.jpg", "description": "La historia más oscura y perturbadora de Batman. Una batalla psicológica entre el héroe y el Joker."}'>
+            <div class="comic-image">
+                <img src="assets/img/batman2_.jpg" alt="Batman: La Broma Asesina">
+            </div>
+            <h5 class="comic-title">Batman: La Broma Asesina</h5>
+            <p class="comic-price">$15.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 3, "title": "Absolute Wonder Woman", "price": "$13.990", "image": "assets/img/wonderwoman.jpg", "description": "La aventura épica de la Mujer Maravilla. Descubre sus orígenes y sus batallas legendarias."}'>
+            <div class="comic-image">
+                <img src="assets/img/wonderwoman.jpg" alt="Wonder Woman Absolute">
+            </div>
+            <h5 class="comic-title">Absolute Wonder Woman </h5>
+            <p class="comic-price">$13.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 4, "title": "X-Men: Días del Futuro Pasado", "price": "$14.990", "image": "assets/img/xmen.jpg", "description": "Un viaje temporal que cambia el destino de los X-Men. Una de las historias más épicas de Marvel."}'>
+            <div class="comic-image">
+                <img src="assets/img/xmen.jpg" alt="X-Men: Días del Futuro Pasado">
+            </div>
+            <h5 class="comic-title">X-Men: Días del Futuro Pasado</h5>
+            <p class="comic-price">$14.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 5, "title": "The Flash: Renacimiento", "price": "$11.990", "image": "assets/img/flash.jpg", "description": "El Corredor Escarlata regresa con una historia emocionante. Velocidad, acción y drama."}'>
+            <div class="comic-image">
+                <img src="assets/img/flash.jpg" alt="The Flash: Renacimiento">
+            </div>
+            <h5 class="comic-title">The Flash: Renacimiento</h5>
+            <p class="comic-price">$11.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 6, "title": "Avengers: Endgame", "price": "$16.990", "image": "assets/img/avengers.jpg", "description": "El clímax épico del Universo Cinematográfico Marvel. Los Vengadores se unen para la batalla final."}'>
+            <div class="comic-image">
+                <img src="assets/img/avengers.jpg" alt="Avengers: Endgame">
+            </div>
+            <h5 class="comic-title">Avengers: Endgame</h5>
+            <p class="comic-price">$16.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 7, "title": "Superman: Hijo Rojo", "price": "$17.990", "image": "assets/img/superman.jpg", "description": "Una historia alternativa donde Superman crece en la Unión Soviética. Un superhéroe diferente."}'>
+            <div class="comic-image">
+                <img src="assets/img/superman.jpg" alt="Superman: Hijo Rojo">
+            </div>
+            <h5 class="comic-title">Superman: Hijo Rojo</h5>
+            <p class="comic-price">$17.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 8, "title": "Watchmen", "price": "$18.990", "image": "assets/img/watchmen.jpg", "description": "La novela gráfica más influyente jamás escrita. Oscura, compleja y revolucionaria."}'>
+            <div class="comic-image">
+                <img src="assets/img/watchmen.jpg" alt="Watchmen">
+            </div>
+            <h5 class="comic-title">Watchmen</h5>
+            <p class="comic-price">$18.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 9, "title": "El Increible Hulk", "price": "$12.990", "image": "assets/img/hulk.jpg", "description": "Las aventuras del gigante verde. Una historia de poder, control y redención."}'>
+            <div class="comic-image">
+                <img src="assets/img/hulk.jpg" alt="Hulk">
+            </div>
+            <h5 class="comic-title">El Increible Hulk</h5>
+            <p class="comic-price">$12.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 10, "title": "Liga de la Justicia: Origen", "price": "$15.990", "image": "assets/img/laligadelajusticia.jpg", "description": "La formación legendaria de los mayores héroes de DC. Descubre cómo comenzó todo."}'>
+            <div class="comic-image">
+                <img src="assets/img/laligadelajusticia.jpg" alt="LLiga de la Justicia">
+            </div>
+            <h5 class="comic-title">Liga de la Justicia: Origen</h5>
+            <p class="comic-price">$15.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 11, "title": "Wolverine: Regreso a la naturaleza", "price": "$13.990", "image": "assets/img/wolverine.jpg", "description": "Logan se enfrenta a su pasado salvaje. Una historia de supervivencia y honor."}'>
+            <div class="comic-image">
+                <img src="assets/img/wolverine.jpg" alt="Wolverine">
+            </div>
+            <h5 class="comic-title">Wolverine: Regreso a la naturaleza </h5>
+            <p class="comic-price">$13.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 12, "title": "The Punisher: Soviet", "price": "$11.990", "image": "assets/img/punisher.jpg", "description": "El Castigador enfrenta un nuevo enemigo en la era de la Guerra Fría. Justicia brutal."}'>
+            <div class="comic-image">
+                <img src="assets/img/punisher.jpg" alt="The Punisher: Soviet">
+            </div>
+            <h5 class="comic-title">The Punisher: Soviet</h5>
+            <p class="comic-price">$11.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 13, "title": "Daredevil: Tierra de sombras", "price": "$16.990", "image": "assets/img/daredevil.jpg", "description": "Matt Murdock lucha en las sombras de Nueva York. Un abogado con un secreto oscuro."}'>
+            <div class="comic-image">
+                <img src="assets/img/daredevil.jpg" alt="Daredevil">
+            </div>
+            <h5 class="comic-title">Daredevil: Tierra de sombras</h5>
+            <p class="comic-price">$16.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 14, "title": "Hellboy: Seed of destruction", "price": "$17.990", "image": "assets/img/hellboy.jpg", "description": "El Demonio Rojo lucha contra fuerzas sobrenaturales. Una aventura oscura y mística."}'>
+            <div class="comic-image">
+                <img src="assets/img/hellboy.jpg" alt="Hellboy">
+            </div>
+            <h5 class="comic-title">Hellboy: Seed of destruction</h5>
+            <p class="comic-price">$17.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 15, "title": "Spawn: Cataclismo", "price": "$18.990", "image": "assets/img/spawn.jpg", "description": "El renacimiento de Spawn. Acción, drama y venganza en las calles de Nueva York."}'>
+            <div class="comic-image">
+                <img src="assets/img/spawn.jpg" alt="Spawn">
+            </div>
+            <h5 class="comic-title">Spawn: Cataclismo</h5>
+            <p class="comic-price">$18.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comic-card"
+            data-product='{"id": 16, "title": "Carnage: Extremo", "price": "$18.990", "image": "assets/img/carnage.jpg", "description": "El simbionte más peligroso de todos regresa. Puro caos y destrucción desatada."}'>
+            <div class="comic-image">
+                <img src="assets/img/carnage.jpg" alt="Carnage">
+            </div>
+            <h5 class="comic-title">Carnage: Extremo</h5>
+            <p class="comic-price">$18.990</p>
+            <button class="btn-añadir" onclick="abrirDetalleProducto(this)">Añadir al Carrito</button>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Modal de Detalles del Producto -->
+    <div id="modalDetalles" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="cerrarModal()">&times;</button>
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="productos.html">Productos</a>
+                <span class="breadcrumb-separator">/</span>
+                <span id="breadcrumbProducto" class="breadcrumb-active">Producto</span>
+            </nav>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductoImagen" src="" alt="Producto">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalProductoTitulo"></h2>
+                    <p id="modalProductoDescripcion" class="modal-descripcion"></p>
+                    <p class="modal-precio-label">Precio:</p>
+                    <p id="modalProductoPrecio" class="modal-precio"></p>
+
+                    <div class="modal-cantidad">
+                        <label for="cantidadProducto">Cantidad:</label>
+                        <select id="cantidadProducto">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-modal-comprar" onclick="confirmarCompra()">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalles del Producto -->
+    <div id="modalDetalles" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="cerrarModal()">&times;</button>
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="productos.html">Productos</a>
+                <span class="breadcrumb-separator">/</span>
+                <span id="breadcrumbProducto" class="breadcrumb-active">Producto</span>
+            </nav>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductoImagen" src="" alt="Producto">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalProductoTitulo"></h2>
+                    <p id="modalProductoDescripcion" class="modal-descripcion"></p>
+                    <p class="modal-precio-label">Precio:</p>
+                    <p id="modalProductoPrecio" class="modal-precio"></p>
+
+                    <div class="modal-cantidad">
+                        <label for="cantidadProducto">Cantidad:</label>
+                        <select id="cantidadProducto">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-modal-comprar" onclick="confirmarCompra()">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-payment">
+                <h4>Métodos de Pago</h4>
+                <div class="payment-logos">
+                    <img src="assets/img/mastercard.png" alt="MasterCard" class="payment-logo">
+                    <img src="assets/img/visa.png" alt="Visa" class="payment-logo">
+                    <img src="assets/img/redcompra.png" alt="RedCompra" class="payment-logo">
+                </div>
+            </div>
+
+            <div class="footer-brand">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo Inframundo"></a>
+                <p>Inframundo - Tienda de comics</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>Arlegui 441, Viña del Mar</p>
+                <p>Email: info@inframundo.cl</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Inframundo Comics. Todos los derechos reservados.</p>
+            <button id="scrollToTop" class="scroll-to-top" aria-label="Subir al inicio">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // Función para abrir el modal con los detalles del producto
+        function abrirDetalleProducto(button) {
+            const card = button.closest('.comic-card');
+            const productData = JSON.parse(card.getAttribute('data-product'));
+
+            // Llenar el modal con los datos del producto
+            document.getElementById('modalProductoImagen').src = productData.image;
+            document.getElementById('modalProductoTitulo').textContent = productData.title;
+            document.getElementById('modalProductoDescripcion').textContent = productData.description;
+            document.getElementById('modalProductoPrecio').textContent = productData.price;
+            document.getElementById('breadcrumbProducto').textContent = productData.title;
+
+            // Mostrar el modal
+            document.getElementById('modalDetalles').style.display = 'flex';
+
+            // Guardar el ID del producto para usar después
+            document.getElementById('modalDetalles').setAttribute('data-product-id', productData.id);
+
+            // Prevenir scroll en el body
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Función para cerrar el modal
+        function cerrarModal() {
+            document.getElementById('modalDetalles').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Función para confirmar la compra
+        function confirmarCompra() {
+            const modalDetalles = document.getElementById('modalDetalles');
+            const productId = modalDetalles.getAttribute('data-product-id');
+            const cantidad = document.getElementById('cantidadProducto').value;
+            const titulo = document.getElementById('modalProductoTitulo').textContent;
+
+            // Aquí podrías agregar la lógica para añadir al carrito
+            alert('Producto: ' + titulo + '\nCantidad: ' + cantidad + '\nSe agregó al carrito correctamente.');
+
+            cerrarModal();
+            document.getElementById('cantidadProducto').value = '1'; // Resetear cantidad
+        }
+
+        // Cerrar el modal al hacer clic fuera de este
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('modalDetalles');
+            if (modal) {
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        cerrarModal();
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
