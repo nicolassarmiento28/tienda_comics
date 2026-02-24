@@ -7,12 +7,18 @@ body {
     background-position: center;
     min-height: 100vh;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -149,11 +155,13 @@ h2 {
 
 .introduccion {
    text-align: center;
-   position: relative; /* contenedor para posicionamiento absoluto */
-   padding-left: 240px; /* deja espacio a la izquierda para el logo */
-   max-width: 1100px;
+   position: relative;
+   padding-left: 240px;
+   max-width: 100%;
    margin: 0 auto;
    justify-content: center;
+   box-sizing: border-box;
+   overflow: hidden;
 }
 
 /* Estilos para la sección de introducción con  servicios de comics, carrusel y búsqueda */
@@ -163,11 +171,13 @@ h2 {
    justify-content: space-between;
    gap: 30px;
    width: 100%;
+   max-width: 100%;
    margin: auto;
    padding: 40px;
    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
    border-radius: 8px;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   box-sizing: border-box;
 }
 
 .intro-header-grid {
@@ -394,8 +404,11 @@ i {
     justify-content: flex-start;
     position: relative;
     width: 100%;
+    max-width: 100%;
     gap: 40px;
     padding: 0 40px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .banner-contenido {
@@ -671,8 +684,10 @@ h4 {
 /* Estilos para el formulario de búsqueda en la introducción */
 .search-form-wrap {
     position: relative;
-    left: -120px;
+    left: 0;
     flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 .search-form {
@@ -763,28 +778,39 @@ h4 {
 @media (max-width: 768px) {
     .carousel {
         width: 100%;
+        max-width: 100%;
     }
 
     .carousel-container {
         width: 100%;
+        max-width: 100%;
+    }
+
+    .introduction-section {
+        padding: 20px 15px;
+        overflow-x: hidden;
     }
 
     .search-form-wrap {
         left: 0;
         width: 100%;
+        max-width: 100%;
         display: flex;
         justify-content: center;
+        overflow-x: hidden;
     }
 
     .search-form {
         width: 100%;
         max-width: 100%;
         flex-wrap: wrap;
+        box-sizing: border-box;
     }
 
     .search-form input[type="search"],
     .search-form .btn.buscar {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .introduccion { padding-left: 0; }
@@ -797,6 +823,24 @@ h4 {
     .introduccion { padding-left: 0; }
     .intro-header-grid { position: static; transform: none; width: auto; margin-bottom: 10px; text-align: center; }
     .intro-header-grid img { width: 90px; }
+    
+    .introduction-section {
+        padding: 15px 10px;
+        overflow-x: hidden;
+    }
+
+    .search-form-wrap {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    .search-form {
+        padding: 12px 15px;
+        border: 3px solid skyblue;
+        box-sizing: border-box;
+    }
     
     .introduccion h1 {
         padding-left: 0;
