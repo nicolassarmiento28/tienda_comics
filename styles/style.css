@@ -30,18 +30,25 @@ h2 {
 }
 
 .navbar {
-    overflow: hidden;
+    overflow: visible;
     background-color: #333;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .navbar a {
-    float: left;
-    padding: 12px;
+    flex: 0 0 auto;
+    padding: 12px 16px;
     color: antiquewhite;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
 }
 
 .navbar a:hover {
@@ -55,40 +62,75 @@ h2 {
 
 .responsive {
    display: none;
-   float: right;
    padding: 12px;
    cursor: pointer;
+   margin-left: auto;
+   background-color: transparent;
+   border: none;
+   color: antiquewhite;
+   font-size: 18px;
+}
+
+.responsive:hover {
+    background-color: rgba(250, 235, 215, 0.2);
+}
+
+/* Mostrar texto de navegación en desktop */
+.nav-text {
+    display: inline;
 }
 
 @media(max-width: 768px) {
     .navbar a {
-        padding: 10px 8px;
+        padding: 10px 12px;
         font-size: 12px;
     }
     
-    .navbar a i {
-        padding: 0 4px;
+    .nav-text {
+        display: inline;
     }
 }
 
 @media(max-width: 600px) {
     .navbar {
         flex-wrap: wrap;
+        position: relative;
     }
     
     .responsive {
-        display: block;
-        float: right;
-        padding: 12px;
-        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 12px 16px !important;
     }
     
     .navbar a:not(.responsive) {
+        position: absolute;
         display: none;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-basis: 100%;
+        background-color: #2a2a2a;
+        border-radius: 0;
     }
     
-    .navbar a i:not(.fa-bars) {
-        display: none;
+    .navbar.active a:not(.responsive) {
+        display: flex;
+        position: static;
+        width: 100%;
+        background-color: #333;
+    }
+    
+    .navbar.active {
+        flex-wrap: wrap;
+    }
+    
+    .nav-text {
+        display: inline;
     }
 }
 
