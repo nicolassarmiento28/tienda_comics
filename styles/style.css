@@ -167,7 +167,7 @@ h2 {
 /* Estilos para la sección de introducción con  servicios de comics, carrusel y búsqueda */
 .introduction-section {
    display: flex;
-   align-items: center;
+   align-items: flex-start;
    justify-content: space-between;
    gap: 30px;
    width: 100%;
@@ -178,6 +178,7 @@ h2 {
    border-radius: 8px;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    box-sizing: border-box;
+   flex-wrap: nowrap;
 }
 
 .intro-header-grid {
@@ -198,7 +199,7 @@ h2 {
    margin: 0;
    padding: 0;
    width: auto;
-   order: -1;
+   order: 1;
    background: none;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -215,15 +216,16 @@ h2 {
 }
 
 .carousel {
-   flex: 1;
+   flex: 0 0 auto;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-    margin-left: 50px;
-    margin-top: 40px;
+   margin-left: 0;
+   margin-top: 0;
    min-width: 400px;
    max-width: 600px;
+   order: 2;
 }
 
 @media (max-width: 1024px) {
@@ -233,9 +235,12 @@ h2 {
     }
     
     .carousel {
-        margin-left: 20px;
         min-width: 300px;
         max-width: 500px;
+    }
+    
+    .introduction-section {
+        padding: 30px 20px;
     }
 }
 
@@ -246,10 +251,48 @@ h2 {
     }
     
     .carousel {
-        margin-left: 0;
-        margin-top: 20px;
         min-width: 100%;
         max-width: 100%;
+    }
+    
+    .introduction-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+    
+    .comic-services {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .carousel {
+        order: 2;
+        width: 100%;
+    }
+    
+    .search-form-wrap {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search-form {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    
+    .search-form input[type="search"],
+    .search-form .btn.buscar {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -258,31 +301,39 @@ h2 {
         width: 150px;
         height: 150px;
     }
+    
+    .introduction-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 8px;
+    }
+    
+    .comic-services {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .carousel {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .search-form-wrap {
+        width: 100%;
+    }
+    
+    .search-form {
+        width: 100%;
+        padding: 12px 15px;
+        border: 3px solid skyblue;
+    }
 }
 
 i {
     padding: 0 8px;
-}
-
-@media (max-width: 1400px) {
-    .introduction-section {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .introduction-section {
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .introduction-section {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px 10px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -686,12 +737,15 @@ h4 {
     position: relative;
     left: 0;
     flex-shrink: 0;
-    width: 100%;
+    width: auto;
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    order: 3;
 }
 
 .search-form {
-    margin: 18px 0 0 0;
+    margin: 0;
     display: flex;
     gap: 10px;
     max-width: 400px;
@@ -773,80 +827,6 @@ h4 {
 @media (max-width: 900px) {
     .introduccion { padding-left: 100px; }
     .intro-header-grid, .intro-header-grid img { width: 110px; }
-}
-
-@media (max-width: 768px) {
-    .carousel {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .carousel-container {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .introduction-section {
-        padding: 20px 15px;
-        overflow-x: hidden;
-    }
-
-    .search-form-wrap {
-        left: 0;
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        overflow-x: hidden;
-    }
-
-    .search-form {
-        width: 100%;
-        max-width: 100%;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-    }
-
-    .search-form input[type="search"],
-    .search-form .btn.buscar {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .introduccion { padding-left: 0; }
-    .intro-header-grid { position: static; transform: none; width: auto; margin-bottom: 12px; text-align: center; }
-    .intro-header-grid img { width: 100px; }
-}
-
-@media (max-width: 600px) {
-    /* en pantallas pequeñas colocamos el logo arriba y centrado */
-    .introduccion { padding-left: 0; }
-    .intro-header-grid { position: static; transform: none; width: auto; margin-bottom: 10px; text-align: center; }
-    .intro-header-grid img { width: 90px; }
-    
-    .introduction-section {
-        padding: 15px 10px;
-        overflow-x: hidden;
-    }
-
-    .search-form-wrap {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 5px;
-        box-sizing: border-box;
-    }
-
-    .search-form {
-        padding: 12px 15px;
-        border: 3px solid skyblue;
-        box-sizing: border-box;
-    }
-    
-    .introduccion h1 {
-        padding-left: 0;
-        font-size: 1.3rem;
-        text-align: center;
-    }
 }
 
 /* Footer styles */
