@@ -62,45 +62,87 @@
     margin-left: 20px;
 }
 
+@media (max-width: 1024px) {
+    .comocomprar-texto {
+        margin: 50px 20px;
+        padding: 30px;
+    }
+    
+    .comocomprar-texto h2 {
+        font-size: 2em;
+    }
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .comocomprar-texto {
-        margin: 40px 20px;
+        margin: 40px 15px;
         padding: 25px;
+        border-radius: 10px;
     }
 
     .comocomprar-texto h2 {
         font-size: 1.8em;
+        margin-bottom: 20px;
     }
 
     .comocomprar-texto h3 {
         font-size: 1.1em;
+        margin-bottom: 15px;
     }
 
     .comocomprar-texto p {
         text-align: left;
         font-size: 0.95em;
+        margin-bottom: 14px;
+    }
+    
+    .comocomprar-texto p:nth-child(5),
+    .comocomprar-texto p:nth-child(6),
+    .comocomprar-texto p:nth-child(8),
+    .comocomprar-texto p:nth-child(10) {
+        margin-left: 10px;
+        padding: 8px 12px;
     }
 }
 
 @media (max-width: 480px) {
     .comocomprar-texto {
-        margin: 30px 15px;
-        padding: 20px;
+        margin: 25px 10px;
+        padding: 15px;
         border-radius: 8px;
     }
 
     .comocomprar-texto h2 {
         font-size: 1.5em;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+    
+    .comocomprar-texto h2::after {
+        width: 60px;
+        height: 2px;
+        margin: 10px auto 0;
     }
 
     .comocomprar-texto h3 {
         font-size: 1em;
+        margin-bottom: 12px;
     }
-
+    
     .comocomprar-texto p {
         font-size: 0.9em;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .comocomprar-texto p:nth-child(5),
+    .comocomprar-texto p:nth-child(6),
+    .comocomprar-texto p:nth-child(8),
+    .comocomprar-texto p:nth-child(10) {
+        margin-left: 0;
+        padding: 6px 10px;
     }
 }
+
